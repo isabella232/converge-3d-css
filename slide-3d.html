@@ -48,6 +48,24 @@
         <h1 class='title'>Slide, 3d transform</h1>
         <button class='next'>details</button>
       </header>
+
+      <h2>normal state</h2>
+      <pre class='code'>
+-webkit-transition: all 0.5s ease-in-out;
+-webkit-transform: translate3d(0, 0, 0);
+-webkit-perspective: 1000;
+-webkit-backface-visibility: hidden;
+      </pre>
+
+      <h2>active state</h2>
+      <pre class='code'>
+-webkit-transform: translate3d(-50%, 0, 0);
+      </pre>
+
+      <h2>state change</h2>
+      <pre class='code'>
+$('.slider').addClass('active');
+      </pre>
     </section>
 
     <section class='screen screen-1'>
@@ -55,6 +73,16 @@
         <button class='back'>back</button>
         <h1 class='title'>Using GPU</h1>
       </header>
+
+      <p class='explanation'>
+        By giving an element a 3d transformation, you're strongly suggesting to the browser that it should be handled by the GPU.
+        It will be given its own layer in the GPU and, once rendered, that layer will be composited with the other layers for painting the page.
+      </p>
+
+      <p class='explanation'>
+        Why not just load everything into the GPU then? Every layer in the GPU consumes memory, so eventually you'll run out.
+        It's best to be selective about which layers you hardware-accelerate.
+      </p>
     </section>
 
   </div>
