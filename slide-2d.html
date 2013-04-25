@@ -48,6 +48,22 @@
         <h1 class='title'>Slide, 2d transform</h1>
         <button class='next'>details</button>
       </header>
+
+      <h2>normal state</h2>
+      <pre class='code'>
+-webkit-transition: all 0.5s ease-in-out;
+-webkit-transform: translate(0, 0);
+      </pre>
+
+      <h2>active state</h2>
+      <pre class='code'>
+-webkit-transform: translate(-50%, 0);
+      </pre>
+
+      <h2>state change</h2>
+      <pre class='code'>
+$('.slider').addClass('active');
+      </pre>
     </section>
 
     <section class='screen screen-1'>
@@ -55,6 +71,15 @@
         <button class='back'>back</button>
         <h1 class='title'>Smooth as butter</h1>
       </header>
+
+      <p class='explanation'>
+        By using 2d transformations instead of 'left' and 'top' properties, you allow the browser to manage the layer's animation as a separate composited unit,
+        speeding things up.
+      </p>
+
+      <p class='explanation'>
+        This technique demonstrates why it's important to test on real devices - the iOS emulator runs this perfectly, but an iPad will blink white before starting the animation.
+      </p>
     </section>
 
   </div>
