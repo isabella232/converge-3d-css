@@ -150,33 +150,29 @@ h2 {
   -webkit-perspective: 800px;
   -webkit-transform-style: preserve-3d;
   width: 100%;
-  height: 200px;
+  height: 250px;
   border-bottom: solid 1px #999;
   overflow: hidden;
 }
 
-.perspective-demo-left {
+.perspective-demo-left, .perspective-demo-right {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
-  margin-top: -50px;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+}
+
+.perspective-demo-left {
   background: #f00;
-  -webkit-transform: translate3d(-35px, 0, 200px) rotateY(45deg) ;
+  -webkit-transform: translate3d(-53px, 0, 200px) rotateY(45deg) ;
 }
 
 .perspective-demo-right {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
-  margin-top: -50px;
   background: #00f;
-  -webkit-transform: translate3d(35px, 0, 200px) rotateY(-45deg) ;
+  -webkit-transform: translate3d(53px, 0, 200px) rotateY(-45deg) ;
 }
 
 .range {
