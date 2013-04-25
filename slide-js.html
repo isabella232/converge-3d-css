@@ -58,8 +58,14 @@ top: 0;
 
       <h2>state change</h2>
       <pre class='code'>
-var x = Math.min(1, progress / SLIDE_TIME) * -width;
-$slider.css('left', x + 'px');
+function slide() {
+  var timestamp = Date.now();
+  var progress = timestamp - start;
+  var x = Math.min(1, progress / SLIDE_TIME) * -width;
+  $slider.css('left', x + 'px');
+
+  if (progress &lt; SLIDE_TIME) requestAnimationFrame(slide);
+}
       </pre>
 
     </section>
