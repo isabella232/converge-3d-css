@@ -82,7 +82,7 @@ h2 {
 }
 
 .topbar {
-  height: 41px;
+  height: 51px;
   background: #eee;
   text-align: center;
   position: relative;
@@ -91,8 +91,8 @@ h2 {
 
 .title {
   margin: 0;
-  padding: 8px 0 0 0;
-  font-weight: 400;
+  padding: 13px 0 0 0;
+  font-weight: 300;
   font-size: 18px;
   color: #eee;
   text-shadow: 0 -1px 0 #000;
@@ -101,9 +101,9 @@ h2 {
 .back, .next {
   -webkit-appearance: none;
   width: 72px;
-  height: 26px;
+  height: 32px;
   position: absolute;
-  top: 7px;
+  top: 9px;
   font-size: 15px;
   padding: 3px 0;
   border-radius: 5px;
@@ -116,13 +116,13 @@ h2 {
 }
 
 .back {
-  left: 3px;
+  left: 5px;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
 .next {
-  right: 3px;
+  right: 5px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
