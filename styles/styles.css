@@ -35,13 +35,24 @@ body {
   left: -100%;
 }
 
-.slider-transformed-2d {
+.slider.transform-2d {
   -webkit-transition: all 0.5s ease-in-out;
   -webkit-transform: translate(0, 0);
 }
 
-.slider-transformed-2d.active {
-  -webkit-transform: translate(-100%, 0);
+.slider.transform-2d.active {
+  -webkit-transform: translate(-50%, 0);
+}
+
+.slider.transform-3d {
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.slider.transform-3d.active {
+  -webkit-transform: translate3d(-50%, 0, 0);
 }
 
 .screen {
@@ -59,7 +70,7 @@ body {
 }
 
 .topbar {
-  height: 40px;
+  height: 41px;
   background: #eee;
   text-align: center;
   position: relative;
@@ -81,8 +92,8 @@ body {
   height: 26px;
   position: absolute;
   top: 7px;
-  font-size: 16px;
-  padding: 2px 0;
+  font-size: 15px;
+  padding: 3px 0;
   border-radius: 5px;
   background: #aaa;
   border: none;

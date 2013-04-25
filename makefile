@@ -10,3 +10,7 @@ build:
 	sed 's/TITLE/Slide (2d)/g' template/header.html > slide-2d.html
 	cat demos/slide-2d.html >> slide-2d.html
 	cat template/footer.html >> slide-2d.html
+
+	sed 's/TITLE/Slide (3d)/g' template/header.html > slide-3d.html
+	cat demos/slide-3d.html >> slide-3d.html
+	cat template/footer.html >> slide-3d.html
