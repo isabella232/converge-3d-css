@@ -143,3 +143,79 @@ h2 {
   font-size: 16px;
   margin: 15px 10%;
 }
+
+.perspective-demo {
+  -webkit-perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  width: 100%;
+  height: 200px;
+  border: solid 1px #999;
+  overflow: hidden;
+}
+
+.perspective-demo-left {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  background: #f00;
+  -webkit-transform: translate3d(-35px, 0, 200px) rotateY(45deg) ;
+}
+
+.perspective-demo-right {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  background: #00f;
+  -webkit-transform: translate3d(35px, 0, 200px) rotateY(-45deg) ;
+}
+
+.range {
+  -webkit-appearance: none;
+  width: 80%;
+  margin: 10px 10%;
+  background: #ddd;
+  padding: 3px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, #ddd),
+      color-stop(1, #eee)
+  );
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  /* position the button on top of everything */
+  z-index: 100;
+  position: relative;
+
+  width: 68px;
+  height: 32px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+  /* arrow and button gradient */
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0, #fefefe),
+      color-stop(0.49, #dddddd),
+      color-stop(0.51, #d1d1d1),
+      color-stop(1, #a1a1a1)
+  );
+  background-repeat: no-repeat;
+  background-position: 50%;
+}

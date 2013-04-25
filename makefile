@@ -14,3 +14,7 @@ build:
 	sed 's/TITLE/Slide (3d)/g' template/header.html > slide-3d.html
 	cat demos/slide-3d.html >> slide-3d.html
 	cat template/footer.html >> slide-3d.html
+
+	sed 's/TITLE/Perspective/g' template/header.html > perspective.html
+	cat demos/perspective.html >> perspective.html
+	cat template/footer.html >> perspective.html
