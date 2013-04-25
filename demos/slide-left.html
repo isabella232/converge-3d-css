@@ -1,0 +1,33 @@
+<div class='frame'>
+  <div class='slider animated'>
+
+    <section class='screen screen-0'>
+      <header class='topbar'>
+        <h1 class='title'>Slide, CSS 'left'</h1>
+        <button class='next'>details</button>
+      </header>
+    </section>
+
+    <section class='screen screen-1'>
+      <header class='topbar'>
+        <button class='back'>back</button>
+        <h1 class='title'>A little better</h1>
+      </header>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+
+    $('.next').click(function(e) {
+      $('.slider').addClass('active');
+    });
+
+    $('.back').click(function(e) {
+      $('.slider').removeClass('active');
+    });
+
+  });
+</script>

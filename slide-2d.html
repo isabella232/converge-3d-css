@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Slide (2d)</title>
+
+  <!-- Mobile Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+
+  <!-- iPhone non-retina 57x57 -->
+  <link rel="apple-touch-icon" href="images/icon57.png"/>
+  <!-- iPad non-retina 72x72 -->
+  <link rel="apple-touch-icon" sizes="72x72" href="images/icon72.png"/>
+  <!-- iPhone retina 114x114 -->
+  <link rel="apple-touch-icon" sizes="114x114" href="images/icon114.png"/>
+  <!-- iPad retina 144x144 -->
+  <link rel="apple-touch-icon" sizes="144x144" href="images/icon144.png"/>
+
+  <!-- iPhone standard resolution 320x460  (landscape not needed because all web apps start portrait on iPhone) -->
+  <link  rel="apple-touch-startup-image" href="images/splash-320x460.jpg" media="(device-width: 320px)" />
+  <!-- iPhone high resolution (retina) 640x920 pixels (landscape not needed because all web apps start portrait on iPhone) -->
+  <link rel="apple-touch-startup-image" href="images/splash-640x920.jpg" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" />
+  <!-- iPad Portrait 768x1004 -->
+  <link rel="apple-touch-startup-image" href="images/splash-768x1004.jpg" media="(device-width: 768px) and (orientation: portrait)" />
+  <!-- iPad Landscape 748x1024 (yes, a portrait image but with content rotated 90 degrees - allows 20px for status bar) -->
+  <link rel="apple-touch-startup-image" href="images/splash-748x1024.jpg" media="(device-width: 768px) and (orientation: landscape)" />
+  <!-- iPad retina Portrait 1536x2008 -->
+  <link rel="apple-touch-startup-image" href="images/splash-1536x2008.jpg" media="(device-width: 768px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" />
+  <!-- iPad retina Landscape 1496x2048 (yes, a portrait image but with content rotated 90 degrees - allows 40px for status bar) -->
+  <link rel="apple-touch-startup-image" href="images/splash-1496x2048.jpg" media="(device-width: 768px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" />
+
+  <!-- Styles -->
+  <link rel='stylesheet' href='styles/styles.css' />
+
+  <!-- Zepto -->
+  <script src='vendor/zepto.min.js'></script>
+
+</head>
+<body>
+<div class='frame'>
+  <div class='slider transformed-2d'>
+
+    <section class='screen screen-0'>
+      <header class='topbar'>
+        <h1 class='title'>Slide, CSS 'left'</h1>
+        <button class='next'>details</button>
+      </header>
+    </section>
+
+    <section class='screen screen-1'>
+      <header class='topbar'>
+        <button class='back'>back</button>
+        <h1 class='title'>A little better</h1>
+      </header>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+
+    $('.next').click(function(e) {
+      $('.slider').addClass('active');
+    });
+
+    $('.back').click(function(e) {
+      $('.slider').removeClass('active');
+    });
+
+  });
+</script><script src='vendor/fastclick.js'></script>
+<script>
+  window.addEventListener('load', function() {
+    new FastClick(document.body);
+  }, false);
+</script>
+
+<script>
+  (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+</script>
+
+</body>
+</html>
+
+

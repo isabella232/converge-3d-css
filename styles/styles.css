@@ -27,6 +27,23 @@ body {
   overflow: visible;
 }
 
+.slider.animated {
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.slider.animated.active {
+  left: -100%;
+}
+
+.slider-transformed-2d {
+  -webkit-transition: all 0.5s ease-in-out;
+  -webkit-transform: translate(0, 0);
+}
+
+.slider-transformed-2d.active {
+  -webkit-transform: translate(-100%, 0);
+}
+
 .screen {
   width: 50%;
   position: absolute;
