@@ -52,7 +52,11 @@
         <div class='perspective-demo-right'></div>
       </div>
 
+      <label>-webkit-perspective (400 - 1100px)</label>
       <input id='perspective-range' class='range' type='range' min='400' max='1100' value='800' />
+
+      <label>-webkit-perspective-origin (0 - 100%)</label>
+      <input id='origin-range' class='range' type='range' min='0' max='100' value='50' />
 
     </section>
 
@@ -67,6 +71,11 @@
     $('#perspective-range').change(function() {
       var val = $(this).val();
       $demo.css('-webkit-perspective', val + 'px');
+    });
+
+    $('#origin-range').change(function() {
+      var val = $(this).val();
+      $demo.css('-webkit-perspective-origin', val + '%');
     });
 
   });
