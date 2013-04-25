@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>3D CSS</title>
+  <title>Slide (JS)</title>
 
   <!-- Mobile Settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -35,21 +35,84 @@
   <!-- Styles -->
   <link rel='stylesheet' href='styles/styles.css' />
 
+  <!-- Zepto -->
+  <script src='vendor/zepto.min.js'></script>
+
 </head>
 <body>
-<section>
-  <header id='topbar'>
-    <h1>Slide with JS</h1>
-    <button class='next'>details</button>
-  </header>
-</section>
+<div class='frame'>
+  <div class='slider'>
 
-<section>
-  <header id='topbar'>
-    <button class='back'>back</button>
-    <h1>Clunky, right?</h1>
-  </header>
-</section>
+    <section class='screen screen-0'>
+      <header class='topbar'>
+        <h1 class='title'>Slide with JS</h1>
+        <button class='next'>details</button>
+      </header>
+    </section>
+
+    <section class='screen screen-1'>
+      <header class='topbar'>
+        <button class='back'>back</button>
+        <h1 class='title'>Clunky, right?</h1>
+      </header>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  var SLIDE_TIME = 500;
+
+  $(document).ready(function() {
+    var width = $('.screen').width();
+    var $slider = $('.slider');
+
+    $('.next').click(function(e) {
+      var start = Date.now();
+
+      requestAnimationFrame(slide);
+
+      function slide() {
+        var timestamp = Date.now();
+        var progress = timestamp - start;
+        var x = Math.min(1, progress / SLIDE_TIME) * -width;
+        $slider.css('left', x + 'px');
+
+        if (progress < SLIDE_TIME) requestAnimationFrame(slide);
+      }
+    });
+
+    $('.back').click(function(e) {
+      var start = Date.now();
+
+      requestAnimationFrame(slide);
+
+      function slide() {
+        var timestamp = Date.now();
+        var progress = timestamp - start;
+        var x = -width + Math.min(1, progress / SLIDE_TIME) * width;
+        $slider.css('left', x + 'px');
+
+        if (progress < SLIDE_TIME) requestAnimationFrame(slide);
+      }
+    });
+
+  });
+</script><script src='vendor/fastclick.js'></script>
+<script>
+  window.addEventListener('load', function() {
+    new FastClick(document.body);
+  }, false);
+</script>
+
+<script>
+  (function() {
+    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    window.requestAnimationFrame = requestAnimationFrame;
+  })();
+</script>
+
 </body>
 </html>
 

@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.frame {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.slider {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  overflow: visible;
+}
+
+.screen {
+  width: 50%;
+  position: absolute;
+  top: 0;
+}
+
+.screen-0 {
+  left: 0;
+}
+
+.screen-1 {
+  left: 50%;
+}
+
+.topbar {
+  height: 40px;
+  background: #eee;
+  text-align: center;
+  position: relative;
+  background: #444;
+}
+
+.title {
+  margin: 0;
+  padding: 8px 0 0 0;
+  font-weight: 400;
+  font-size: 18px;
+  color: #eee;
+  text-shadow: 0 -1px 0 #000;
+}
+
+.back, .next {
+  -webkit-appearance: none;
+  width: 72px;
+  height: 26px;
+  position: absolute;
+  top: 7px;
+  font-size: 16px;
+  padding: 2px 0;
+  border-radius: 5px;
+  background: #aaa;
+  border: none;
+}
+
+.back:active, .next:active {
+  background: #fff;
+}
+
+.back {
+  left: 3px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.next {
+  right: 3px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

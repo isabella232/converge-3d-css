@@ -1,13 +1,59 @@
-<section>
-  <header id='topbar'>
-    <h1>Slide with JS</h1>
-    <button class='next'>details</button>
-  </header>
-</section>
+<div class='frame'>
+  <div class='slider'>
 
-<section>
-  <header id='topbar'>
-    <button class='back'>back</button>
-    <h1>Clunky, right?</h1>
-  </header>
-</section>
+    <section class='screen screen-0'>
+      <header class='topbar'>
+        <h1 class='title'>Slide with JS</h1>
+        <button class='next'>details</button>
+      </header>
+    </section>
+
+    <section class='screen screen-1'>
+      <header class='topbar'>
+        <button class='back'>back</button>
+        <h1 class='title'>Clunky, right?</h1>
+      </header>
+    </section>
+
+  </div>
+</div>
+
+<script>
+  var SLIDE_TIME = 500;
+
+  $(document).ready(function() {
+    var width = $('.screen').width();
+    var $slider = $('.slider');
+
+    $('.next').click(function(e) {
+      var start = Date.now();
+
+      requestAnimationFrame(slide);
+
+      function slide() {
+        var timestamp = Date.now();
+        var progress = timestamp - start;
+        var x = Math.min(1, progress / SLIDE_TIME) * -width;
+        $slider.css('left', x + 'px');
+
+        if (progress < SLIDE_TIME) requestAnimationFrame(slide);
+      }
+    });
+
+    $('.back').click(function(e) {
+      var start = Date.now();
+
+      requestAnimationFrame(slide);
+
+      function slide() {
+        var timestamp = Date.now();
+        var progress = timestamp - start;
+        var x = -width + Math.min(1, progress / SLIDE_TIME) * width;
+        $slider.css('left', x + 'px');
+
+        if (progress < SLIDE_TIME) requestAnimationFrame(slide);
+      }
+    });
+
+  });
+</script>
