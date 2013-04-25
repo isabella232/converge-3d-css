@@ -167,12 +167,12 @@ h2 {
 
 .perspective-demo-left {
   background: #f00;
-  -webkit-transform: translate3d(-53px, 0, 200px) rotateY(45deg) ;
+  -webkit-transform: translate3d(-53px, 0, 180px) rotateY(45deg) ;
 }
 
 .perspective-demo-right {
   background: #00f;
-  -webkit-transform: translate3d(53px, 0, 200px) rotateY(-45deg) ;
+  -webkit-transform: translate3d(53px, 0, 180px) rotateY(-45deg) ;
 }
 
 .range {
