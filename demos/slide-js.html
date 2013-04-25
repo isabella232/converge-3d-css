@@ -6,6 +6,20 @@
         <h1 class='title'>Slide with JS</h1>
         <button class='next'>details</button>
       </header>
+
+      <h2>normal state</h2>
+      <pre class='code'>
+position: absolute;
+left: 0;
+top: 0;
+      </pre>
+
+      <h2>state change</h2>
+      <pre class='code'>
+var x = Math.min(1, progress / SLIDE_TIME) * -width;
+$slider.css('left', x + 'px');
+      </pre>
+
     </section>
 
     <section class='screen screen-1'>
@@ -13,6 +27,17 @@
         <button class='back'>back</button>
         <h1 class='title'>Clunky, right?</h1>
       </header>
+
+      <p class='explanation'>
+        It's 2013 - stop using JavaScript to animate things! It's almost never a good idea.
+        Beyond the increased CPU load, bad performance, and terrible user experience, it mixes presentation with business logic.
+        JavaScript-based animations are harder to write and maintain, and they don't deliver many of the features available in CSS.
+      </p>
+
+      <p class='explanation'>
+        Some developers still use JS-based animation because it's baked into jQuery.
+        If you're developing a mobile solution, check out Zepto.js instead - it follows the jQuery API but implements mobile features like CSS-only animations.
+      </p>
     </section>
 
   </div>
