@@ -36,59 +36,50 @@ body {
   background: #00f;
 }
 
-#mountains1 {
+#mountains {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   height: 60%;
-  background: #99f;
+  background: url('../images/mountains1.jpg') no-repeat center center;
+  -webkit-background-size: cover;
   -webkit-transform-origin: 50% 100%;
-  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 150px);
 }
 
-#mountains2 {
+#barn {
+  position: absolute;
+  left: 60%;
+  bottom: 40%;
+  width: 250px;
+  height: 122px;
+  background: url('../images/barn.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transform: translate3d(0, 0, 220px);
+}
+
+#road {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 60%;
-  background: #44f;
-  opacity: 0.75;
+  height: 40%;
+  background: url('../images/road.png') no-repeat center center;
+  -webkit-background-size: cover;
   -webkit-transform-origin: 50% 100%;
   -webkit-transform: translate3d(0, 0, 300px);
 }
 
-#clouds {
-  position: absolute;
-  left: 0;
-  bottom: 50%;
-  width: 100%;
-  height: 60%;
-  background: #fff;
-  opacity: 0.75;
-  -webkit-transform-origin: 50% 100%;
-  -webkit-transform: translate3d(0, -25%, 301px) rotateX(90deg);
-}
-
-#trees {
+#cow {
   position: absolute;
   left: 50%;
   bottom: 0;
-  width: 100px;
-  height: 35%;
-  background: #0f0;
+  width: 400px;
+  height: 267px;
+  background: url('../images/cow.png') no-repeat center center;
+  -webkit-background-size: cover;
   -webkit-transform-origin: 50% 100%;
-  -webkit-transform: translate3d(0, 0, 700px);
-}
-
-#sign {
-  position: absolute;
-  left: 30%;
-  bottom: 0;
-  width: 10%;
-  height: 10%;
-  background: #f00;
-  -webkit-transform-origin: 50% 100%;
-  -webkit-transform: translate3d(0, 0, 700px) rotateY(45deg);
+  -webkit-transform: translate3d(-550px, 50px, 600px);
 }
