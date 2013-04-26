@@ -63,6 +63,9 @@
       <label>rotate3d(0, 1, 0, angle), 0 - 360deg</label>
       <input id='rotate-range' class='range' type='range' min='0' max='360' value='0' />
 
+      <label>transform-origin(x, 50%), 0 - 100%</label>
+      <input id='origin-range' class='range' type='range' min='0' max='100' value='50' />
+
     </section>
 
 </div>
@@ -76,6 +79,7 @@
     var scale = 1;
     var rotate = 0;
     var translateX = 0;
+    var origin = 50;
 
     $('#translate-x-range').change(function() {
       translateX = $(this).val();
@@ -97,13 +101,20 @@
       update();
     });
 
+    $('#origin-range').change(function() {
+      origin = $(this).val();
+      update();
+    })
+
     function update() {
       var transform = [
       'translate3d(' + translateX + 'px, 0, ' + translate + 'px)',
       'scale3d(' + scale + ', 1, 1)',
       'rotate3d(0, 1, 0, ' + rotate + 'deg)'].join(' ');
 
-      $demo.css('-webkit-transform', transform);
+      $demo
+        .css('-webkit-transform-origin', origin + '% 50%')
+        .css('-webkit-transform', transform);
     }
 
   });
