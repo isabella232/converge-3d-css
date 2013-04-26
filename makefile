@@ -18,3 +18,7 @@ build:
 	sed 's/TITLE/Perspective/g' template/header.html > perspective.html
 	cat demos/perspective.html >> perspective.html
 	cat template/footer.html >> perspective.html
+
+	sed 's/TITLE/Transform/g' template/header.html > transform.html
+	cat demos/transform.html >> transform.html
+	cat template/footer.html >> transform.html
