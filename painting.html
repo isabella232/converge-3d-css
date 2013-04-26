@@ -55,7 +55,7 @@
 
     $('body').on('mousemove touchmove', function(e) {
       var x = (e.pageX / $('body').width()) * 100;
-      var y = 80 - (e.pageY / $('body').height()) * -20;
+      var y = 85 - (e.pageY / $('body').height()) * -15;
       $('#scene').css('-webkit-perspective-origin', x + '% ' + y + '%');
       return false;
     });
