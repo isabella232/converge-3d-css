@@ -44,7 +44,7 @@
 
     <section class='screen'>
       <header class='topbar'>
-        <h1 class='title'>Translate3D</h1>
+        <h1 class='title'>3D Transformations</h1>
       </header>
 
       <div class='translate-demo'>
@@ -71,6 +71,11 @@
       <label>
         <input id='preserve-check' class='checkbox' type='checkbox'/>
         transform-style: preserve-3d
+      </label>
+
+      <label>
+        <input id='backface-check' class='checkbox' type='checkbox'/>
+        backface-visibility: hidden
       </label>
 
     </section>
@@ -116,6 +121,11 @@
     $('#preserve-check').change(function() {
       var val = $(this).prop('checked') ? 'preserve-3d' : 'flat';
       $demo.css('-webkit-transform-style', val);
+    });
+
+    $('#backface-check').change(function() {
+      var val = $(this).prop('checked') ? 'hidden' : 'visible';
+      $demo.css('-webkit-backface-visibility', val);
     });
 
     function update() {
