@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Helvetica Neue', helvetica, arial, sans-serif;
+  font-size: 12px;
+}
+
+#scene {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#sky {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #00f;
+}
+
+#mountains {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60%;
+  background: url('../images/mountains1.jpg') no-repeat center center;
+  -webkit-background-size: cover;
+}
+
+#barn {
+  position: absolute;
+  left: 60%;
+  bottom: 40%;
+  width: 250px;
+  height: 122px;
+  background: url('../images/barn.png') no-repeat center center;
+  -webkit-background-size: cover;
+}
+
+#road {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: url('../images/road.png') no-repeat center center;
+  -webkit-background-size: cover;
+}
+
+#cow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 400px;
+  height: 267px;
+  background: url('../images/cow.png') no-repeat center center;
+  -webkit-background-size: cover;
+}
