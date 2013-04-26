@@ -9,6 +9,9 @@
         <div id='demo' class='translate-demo-box'></div>
       </div>
 
+      <label>translate3d(x, 0, 0), -200 - 200px</label>
+      <input id='translate-x-range' class='range' type='range' min='-200' max='200' value='0' />
+
       <label>translate3d(0, 0, z), -200 - 200px</label>
       <input id='translate-range' class='range' type='range' min='-200' max='200' value='0' />
 
@@ -30,6 +33,12 @@
     var translate = 0;
     var scale = 1;
     var rotate = 0;
+    var translateX = 0;
+
+    $('#translate-x-range').change(function() {
+      translateX = $(this).val();
+      update();
+    });
 
     $('#translate-range').change(function() {
       translate = $(this).val();
@@ -48,7 +57,7 @@
 
     function update() {
       var transform = [
-      'translate3d(0, 0, ' + translate + 'px)',
+      'translate3d(' + translateX + 'px, 0, ' + translate + 'px)',
       'scale3d(' + scale + ', 1, 1)',
       'rotate3d(0, 1, 0, ' + rotate + 'deg)'].join(' ');
 
